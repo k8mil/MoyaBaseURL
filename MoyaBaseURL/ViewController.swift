@@ -1,5 +1,6 @@
 import UIKit
 import Moya
+import Alamofire
 
 
 enum MyApi {
@@ -57,10 +58,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let rightButton = UIBarButtonItem(title: "WITH PATH", style: .plain, target: self, action: #selector(withPathRequest))
-        let leftButton = UIBarButtonItem(title: "WITHOUT PATH", style: .plain, target: self, action: #selector(withoutPathRequest))
-        navigationItem.leftBarButtonItem = leftButton
-        navigationItem.rightBarButtonItem = rightButton
+        addButtons()
+    }
+
+    func alamofire() {
+        Alamofire.request(URL(string: "https://google.com/123/somepath?X-ABC-Asd=123")!, method: .get,
+                encoding: URLEncoding.default).response {
+            response in
+
+            print("alamofire : \(response)")
+        }
     }
 
     @objc func withoutPathRequest() {
@@ -75,5 +82,21 @@ class ViewController: UIViewController {
             result in
             print(result)
         }
+    }
+}
+
+extension ViewController {
+
+    fileprivate func addButtons() {
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        button.backgroundColor = UIColor.red
+        button.setTitle("AlamofireReq", for: .normal)
+        button.addTarget(self, action: #selector(alamofire), for: .touchUpInside)
+        self.navigationItem.titleView = button
+        let rightButton = UIBarButtonItem(title: "WITH PATH", style: .plain, target: self, action: #selector(withPathRequest))
+        let leftButton = UIBarButtonItem(title: "WITHOUT PATH", style: .plain, target: self, action: #selector(withoutPathRequest))
+        navigationItem.leftBarButtonItem = leftButton
+        navigationItem.rightBarButtonItem = rightButton
     }
 }
