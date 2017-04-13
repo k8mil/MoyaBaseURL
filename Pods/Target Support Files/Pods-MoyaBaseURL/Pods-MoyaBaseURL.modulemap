@@ -1,0 +1,6 @@
+framework module Pods_MoyaBaseURL {
+  umbrella header "Pods-MoyaBaseURL-umbrella.h"
+
+  export *
+  module * { export * }
+}

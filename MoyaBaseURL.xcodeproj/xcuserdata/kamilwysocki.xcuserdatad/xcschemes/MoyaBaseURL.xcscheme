@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B445E155EE9E83AB3260C8D0"
+               BuildableName = "MoyaBaseURL.app"
+               BlueprintName = "MoyaBaseURL"
+               ReferencedContainer = "container:MoyaBaseURL.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B445E155EE9E83AB3260C8D0"
+            BuildableName = "MoyaBaseURL.app"
+            BlueprintName = "MoyaBaseURL"
+            ReferencedContainer = "container:MoyaBaseURL.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
