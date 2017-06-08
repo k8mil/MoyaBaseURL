@@ -6,5 +6,6 @@ target 'MoyaBaseURL' do
   use_frameworks!
 
   # Pods for MoyaBaseURL
-  pod 'Moya', '8.0'
+  pod 'Moya'
+
 end
